@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'dust_wallet',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'dust'),
     );
   }
 }
@@ -78,13 +78,33 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            // Logo on the left side
+            Image.asset(
+              'assets/dust_symbol.png', // Replace with your logo image path
+              height: 40,
+            ),
+
+            // Dropdown menu on the right side
+            DropdownButton<String>(
+              icon: Icon(Icons.more_vert, color: Colors.white),
+              underline: Container(), // Remove the underline
+              items: <String>['Option 1', 'Option 2', 'Option 3'].map((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+              onChanged: (String? newValue) {
+                // Handle dropdown selection
+                print('Selected: $newValue');
+              },
+            ),
+          ],
+        ),
+        backgroundColor: Colors.blue,
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
