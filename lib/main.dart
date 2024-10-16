@@ -81,32 +81,36 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            // Logo on the left side
-            Image.asset(
-              'assets/dust_symbol.png', // Replace with your logo image path
-              height: 40,
+            GestureDetector(
+              onTap: () {
+                Navigator.popUntil(context, (route) => route.isFirst);
+              },
+              child: // Logo on the left side
+              Image.asset(
+                'assets/dust_symbol.png', // Replace with your logo image path
+                height: 40,
+              ),
+            ),
+            // wallet on the right side
+            GestureDetector(
+              onTap: () {
+                // TODO: open up wallet connector
+              },
+              child: // Logo on the left side
+              Image.asset(
+                'assets/wallet_icon.png', // Replace with your logo image path
+                height: 40,
+              ),
             ),
 
             // Dropdown menu on the right side
-            DropdownButton<String>(
-              icon: Icon(Icons.more_vert, color: Colors.white),
-              underline: Container(), // Remove the underline
-              items: <String>['Option 1', 'Option 2', 'Option 3'].map((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
-              onChanged: (String? newValue) {
-                // Handle dropdown selection
-                print('Selected: $newValue');
-              },
-            ),
+
           ],
         ),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.white,
       ),
-      body: Center(
+      body:
+      Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Column(
