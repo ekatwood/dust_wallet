@@ -8,6 +8,7 @@ class wallet_appbar extends StatefulWidget {
 
 class _wallet_appbarState extends State<wallet_appbar> {
   GlobalKey _gestureKey = GlobalKey();
+  String wallet_icon = 'assets/wallet_icon.png';
 
   void _showDropdownMenu() {
     final RenderBox renderBox = _gestureKey.currentContext!.findRenderObject() as RenderBox;
@@ -51,14 +52,28 @@ class _wallet_appbarState extends State<wallet_appbar> {
       ],
     ).then((value) async {
       if (value != null) {
+
+        bool result = false;
+
         // Handle the selection here (navigation or actions)
         print('$value selected');
 
         if(value == 'SubWallet')
-          await connectToSubWallet();
+          result = await connectToSubWallet();
 
         if(value == 'Talisman')
-          await connectToTalisman();
+          result = await connectToTalisman();
+
+        if(result){
+          setState(() {
+            wallet_icon = 'assets/wallet_green.png';
+          });
+        }
+        else{
+          setState(() {
+            wallet_icon = 'assets/wallet_icon.png';
+          });
+        }
       }
     });
   }
@@ -72,7 +87,7 @@ class _wallet_appbarState extends State<wallet_appbar> {
         padding: EdgeInsets.all(8),
         //color: Colors.blue,
         child: Image.asset(
-          'assets/wallet_icon.png',
+          wallet_icon,
           height: 48,
         ),
       ),
@@ -80,20 +95,28 @@ class _wallet_appbarState extends State<wallet_appbar> {
   }
 }
 
-Future<void> connectToSubWallet() async {
+Future<bool> connectToSubWallet() async {
   try {
     var result = js.context.callMethod('connectToSubWallet');
     print("Connected to SubWallet: $result");
+
+    return true;
   } catch (e) {
     print("Error connecting to SubWallet: $e");
+
+    return false;
   }
 }
 
-Future<void> connectToTalisman() async {
+Future<bool> connectToTalisman() async {
   try {
     var result = js.context.callMethod('connectToTalisman');
     print("Connected to Talisman: $result");
+
+    return true;
   } catch (e) {
     print("Error connecting to Talisman: $e");
+
+    return false;
   }
 }
