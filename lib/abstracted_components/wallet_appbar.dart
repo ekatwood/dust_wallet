@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:js' as js;
 
 class wallet_appbar extends StatefulWidget {
   @override
@@ -23,14 +24,6 @@ class _wallet_appbarState extends State<wallet_appbar> {
       ),
       items: [
         PopupMenuItem<String>(
-          value: 'Aleph_Zero_Vault',
-          child: Row(
-            children: [
-              Text('Aleph Zero Vault'),
-            ],
-          ),
-        ),
-        PopupMenuItem<String>(
           value: 'SubWallet',
           child: Row(
             children: [
@@ -47,14 +40,6 @@ class _wallet_appbarState extends State<wallet_appbar> {
           ),
         ),
         PopupMenuItem<String>(
-          value: 'Polkadot',
-          child: Row(
-            children: [
-              Text('Polkadot{.js}'),
-            ],
-          ),
-        ),
-        PopupMenuItem<String>(
           //TODO: only display this option on mobile app version, not web app
           value: 'Nova_Wallet',
           child: Row(
@@ -64,10 +49,16 @@ class _wallet_appbarState extends State<wallet_appbar> {
           ),
         ),
       ],
-    ).then((value) {
+    ).then((value) async {
       if (value != null) {
         // Handle the selection here (navigation or actions)
         print('$value selected');
+
+        if(value == 'SubWallet')
+          await connectToSubWallet();
+
+        if(value == 'Talisman')
+          await connectToTalisman();
       }
     });
   }
@@ -86,5 +77,23 @@ class _wallet_appbarState extends State<wallet_appbar> {
         ),
       ),
     );
+  }
+}
+
+Future<void> connectToSubWallet() async {
+  try {
+    var result = js.context.callMethod('connectToSubWallet');
+    print("Connected to SubWallet: $result");
+  } catch (e) {
+    print("Error connecting to SubWallet: $e");
+  }
+}
+
+Future<void> connectToTalisman() async {
+  try {
+    var result = js.context.callMethod('connectToTalisman');
+    print("Connected to Talisman: $result");
+  } catch (e) {
+    print("Error connecting to Talisman: $e");
   }
 }
