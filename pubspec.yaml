@@ -32,6 +32,7 @@ dependencies:
     sdk: flutter
   web3dart: ^2.3.4
   http: ^0.13.3
+  webview_flutter: ^4.0.2
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -65,6 +66,9 @@ flutter:
     - assets/dust_symbol.png
     - assets/wallet_icon.png
     - assets/wallet_green.png
+    - assets/nova_wallet_logo.png
+    - assets/subwallet_logo.png
+    - assets/talisman_logo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

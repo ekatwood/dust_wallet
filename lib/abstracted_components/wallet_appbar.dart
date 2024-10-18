@@ -28,7 +28,11 @@ class _wallet_appbarState extends State<wallet_appbar> {
           value: 'SubWallet',
           child: Row(
             children: [
-              Text('SubWallet'),
+              Image.asset(
+                'assets/subwallet_logo.png',
+                height: 32,
+              ),
+              Text('  SubWallet'),
             ],
           ),
         ),
@@ -36,7 +40,11 @@ class _wallet_appbarState extends State<wallet_appbar> {
           value: 'Talisman',
           child: Row(
             children: [
-              Text('Talisman'),
+              Image.asset(
+                'assets/talisman_logo.png',
+                height: 32,
+              ),
+              Text('  Talisman'),
             ],
           ),
         ),
@@ -45,7 +53,11 @@ class _wallet_appbarState extends State<wallet_appbar> {
           value: 'Nova_Wallet',
           child: Row(
             children: [
-              Text('Nova Wallet (app only)'),
+              Image.asset(
+                'assets/nova_wallet_logo.png',
+                height: 32,
+              ),
+              Text('  Nova Wallet (app only)'),
             ],
           ),
         ),
