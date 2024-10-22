@@ -1,3 +1,4 @@
+import 'package:dust_wallet/abstracted_components/wallet_interactions.dart';
 import 'package:flutter/material.dart';
 import 'dart:js' as js;
 
@@ -76,14 +77,32 @@ class _wallet_appbarState extends State<wallet_appbar> {
         if(value == 'Talisman')
           result = await connectToTalisman();
 
+        //if(value == 'Nova_Wallet')
+        //  result = await connectToTalisman();
+
         if(result){
+
+          //TODO: wait until connection is complete, and get balance and
+          // account hash
+          switch(value) {
+            case 'SubWallet':
+              print('get info');
+            case 'Talisman':
+              print('get info');
+            case 'Nova_Wallet':
+              print('get info');
+          }
+
           setState(() {
             wallet_icon = 'assets/wallet_green.png';
-          });
+            }
+          );
         }
         else{
           setState(() {
             wallet_icon = 'assets/wallet_icon.png';
+            // TODO: test and handle error connecting to wallet
+            print('error connecting to wallet');
           });
         }
       }

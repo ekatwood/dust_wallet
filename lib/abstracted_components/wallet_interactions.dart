@@ -13,13 +13,14 @@ void useSubWallet() async {
   print("Balance: ${balance.getValueInUnit(EtherUnit.ether)} ETH");
 }
 
-void useTalismanProvider() async {
-  final client = Web3Client("https://rpc.polkadot.io", Client());
+Future<String> useTalismanProvider() async {
+  final client = Web3Client('https://rpc.azero.dev', Client());
 
   // Now you can interact with the blockchain
 
   // For example, get the balance of an account
-  EthereumAddress address = EthereumAddress.fromHex("YOUR_ACCOUNT_ADDRESS");
+  EthereumAddress address = EthereumAddress.fromHex('5GsH6Nt1XYenFs9dqzVBG878SeT9G9sQL66BaLn2PpdRniHa');
   EtherAmount balance = await client.getBalance(address);
   print("Balance: ${balance.getValueInUnit(EtherUnit.ether)} ETH");
+  return("Balance: ${balance.getValueInUnit(EtherUnit.ether)} ETH");
 }

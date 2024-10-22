@@ -57,9 +57,84 @@ class _HomePageState extends State<HomePage> {
       body:
       Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          //mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-
+            SizedBox(height: 25.0),
+            // First large piece of text
+            Text(
+              'your dust:',
+              style: TextStyle(
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 20.0), // Spacing between the texts
+            // Second large piece of text
+            Text(
+              //TODO: load their balance from their wallet
+              'ẟ158.79',
+              style: TextStyle(
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 46.0),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(200, 60), // Full-width, large button
+              ),
+              child: Text(
+                'send',
+                style: TextStyle(fontSize: 20.0),
+                  ),
+                ),
+            SizedBox(height: 20.0),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(200, 60), // Full-width, large button
+              ),
+              child: Text(
+                'receive',
+                style: TextStyle(fontSize: 20.0),
+              ),
+            ),
+            SizedBox(height: 20.0),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(200, 60), // Full-width, large button
+              ),
+              child: Text(
+                'buy dust',
+                style: TextStyle(fontSize: 20.0),
+              ),
+            ),
+            SizedBox(height: 20.0),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(200, 60), // Full-width, large button
+              ),
+              child: Text(
+                'transact',
+                style: TextStyle(fontSize: 20.0),
+              ),
+            ),
+            SizedBox(height: 20.0),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(200, 60), // Full-width, large button
+              ),
+              child: Text(
+                'donate',
+                style: TextStyle(fontSize: 20.0),
+              ),
+            ),
           ],
         ),
       ),
