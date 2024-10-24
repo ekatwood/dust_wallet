@@ -1,6 +1,8 @@
 import 'package:web3dart/web3dart.dart';
 import 'package:http/http.dart';  // For making web requests
 
+final String AZEROTESTNET = 'https://rpc.alephzero-testnet.gelato.digital';
+
 // from chatGPT, requires versioning
 void useSubWallet() async {
   final client = Web3Client("https://rpc.polkadot.io", Client());
