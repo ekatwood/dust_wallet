@@ -1,13 +1,10 @@
+import 'package:dust_wallet/receive.dart';
+import 'package:dust_wallet/send.dart';
+import 'package:dust_wallet/transact.dart';
 import 'package:flutter/material.dart';
 import 'abstracted_components/wallet_appbar.dart';
-// import 'package:firebase_core/firebase_core.dart';
-// import 'package:firebase_analytics/firebase_analytics.dart';
 
 void main() async {
-
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp();
-  // FirebaseAnalytics analytics = FirebaseAnalytics.instance;
   runApp(const dustwallet());
 }
 
@@ -88,7 +85,12 @@ class _HomePageState extends State<HomePage> {
             ),
             SizedBox(height: 46.0),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SendPage()),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(200, 60), // Full-width, large button
               ),
@@ -99,7 +101,12 @@ class _HomePageState extends State<HomePage> {
                 ),
             SizedBox(height: 20.0),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ReceivePage()),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(200, 60), // Full-width, large button
               ),
@@ -121,7 +128,12 @@ class _HomePageState extends State<HomePage> {
             ),
             SizedBox(height: 20.0),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const TransactPage()),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(200, 60), // Full-width, large button
               ),
