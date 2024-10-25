@@ -1,3 +1,5 @@
+import 'package:dust_wallet/buy_dust.dart';
+import 'package:dust_wallet/donate.dart';
 import 'package:dust_wallet/receive.dart';
 import 'package:dust_wallet/send.dart';
 import 'package:dust_wallet/transact.dart';
@@ -62,9 +64,9 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           //mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(height: 25.0),
+            const SizedBox(height: 25.0),
             // First large piece of text
-            Text(
+            const Text(
               'your dust:',
               style: TextStyle(
                 fontSize: 24.0,
@@ -72,9 +74,9 @@ class _HomePageState extends State<HomePage> {
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 20.0), // Spacing between the texts
+            const SizedBox(height: 20.0), // Spacing between the texts
             // Second large piece of text
-            Text(
+            const Text(
               //TODO: load their balance from their wallet
               'ẟ158.79',
               style: TextStyle(
@@ -83,7 +85,7 @@ class _HomePageState extends State<HomePage> {
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 46.0),
+            const SizedBox(height: 46.0),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -94,12 +96,12 @@ class _HomePageState extends State<HomePage> {
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(200, 60), // Full-width, large button
               ),
-              child: Text(
+              child: const Text(
                 'send',
                 style: TextStyle(fontSize: 20.0),
                   ),
                 ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -110,23 +112,28 @@ class _HomePageState extends State<HomePage> {
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(200, 60), // Full-width, large button
               ),
-              child: Text(
+              child: const Text(
                 'receive',
                 style: TextStyle(fontSize: 20.0),
               ),
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const BuyDustPage()),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(200, 60), // Full-width, large button
               ),
-              child: Text(
+              child: const Text(
                 'buy dust',
                 style: TextStyle(fontSize: 20.0),
               ),
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -137,18 +144,23 @@ class _HomePageState extends State<HomePage> {
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(200, 60), // Full-width, large button
               ),
-              child: Text(
+              child: const Text(
                 'transact',
                 style: TextStyle(fontSize: 20.0),
               ),
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const DonatePage()),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(200, 60), // Full-width, large button
               ),
-              child: Text(
+              child: const Text(
                 'donate',
                 style: TextStyle(fontSize: 20.0),
               ),

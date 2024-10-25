@@ -40,7 +40,7 @@ class _SendPageState extends State<SendPage> {
           children: <Widget>[
             SizedBox(height: 25.0),
             // First large piece of text
-            Text(
+            const Text(
               'send',
               style: TextStyle(
                 fontSize: 24.0,
@@ -48,9 +48,9 @@ class _SendPageState extends State<SendPage> {
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 20.0), // Spacing between the texts
+            const SizedBox(height: 20.0), // Spacing between the texts
             // Second large piece of text
-            Text(
+            const Text(
               'Recipient Wallet Address:',
               style: TextStyle(
                 fontSize: 18.0,
@@ -58,7 +58,7 @@ class _SendPageState extends State<SendPage> {
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 46.0),
+            const SizedBox(height: 46.0),
             const SizedBox(
               width: 360,
               child: TextField(
@@ -68,13 +68,13 @@ class _SendPageState extends State<SendPage> {
                 ),
               ),
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(200, 60), // Full-width, large button
               ),
-              child: Text(
+              child: const Text(
                 'send',
                 style: TextStyle(fontSize: 20.0),
               ),

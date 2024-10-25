@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'abstracted_components/wallet_appbar.dart';
 
-class TransactPage extends StatefulWidget {
-  const TransactPage({super.key});
+class BuyDustPage extends StatefulWidget {
+  const BuyDustPage({super.key});
 
   @override
-  State<TransactPage> createState() => _TransactPageState();
+  State<BuyDustPage> createState() => _BuyDustPageState();
 }
 
-class _TransactPageState extends State<TransactPage> {
+class _BuyDustPageState extends State<BuyDustPage> {
 
   @override
   Widget build(BuildContext context) {
@@ -34,14 +34,14 @@ class _TransactPageState extends State<TransactPage> {
         backgroundColor: Colors.white,
       ),
       body:
-      Center(
+      const Center(
         child: Column(
           //mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const SizedBox(height: 25.0),
+            SizedBox(height: 25.0),
             // First large piece of text
-            const Text(
-              'transact',
+            Text(
+              'buy dust',
               style: TextStyle(
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,
@@ -49,35 +49,20 @@ class _TransactPageState extends State<TransactPage> {
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 25.0),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                minimumSize: Size(200, 60), // Full-width, large button
-              ),
-              child: const Text(
-                'scan QR',
-                style: TextStyle(fontSize: 20.0),
+            SizedBox(
+              height: 450,
+              child: Image(
+                  image: AssetImage('assets/AZERO_onboarding.png')
               ),
             ),
-            const SizedBox(height: 20.0),
-            const Text(
-              'or',
+            SizedBox(height: 20.0),
+            Text(
+              'Your \$AZERO will be automatically converted into \$ẟ',
               style: TextStyle(
                 fontSize: 18.0,
                 fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,
-            ),
-            SizedBox(height: 20.0),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                minimumSize: Size(200, 60), // Full-width, large button
-              ),
-              child: const Text(
-                'place',
-                style: TextStyle(fontSize: 20.0),
-              ),
             ),
           ],
         ),
