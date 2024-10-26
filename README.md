@@ -1,8 +1,8 @@
 # dust_wallet
 
-A cryptocurrency wallet built on AlephZero blockchain.
+A cryptocurrency wallet built on the Aleph Zero blockchain.
 
-This will be a simple cryptocurrency built with Rust smart contracts on the AlephZero blockchain. The wallet will have all the functionality for usage of a cryptocurrency, as well as the ability to scan a QR code and pay for something at a payment turnstile. Also, the app version will have support for Nova wallet as well as 'tap to pay' at a turnstile.
+This will be a simple cryptocurrency built with Rust smart contracts on the Aleph Zero blockchain. The wallet will have all the functionality for usage of a cryptocurrency, as well as the ability to scan a QR code and pay for something at a payment turnstile. Also, the app version will have support for Nova wallet as well as 'tap to pay' at a turnstile.
 
 The simple design of the web app and app versions will be agreeable to users, and the fact that it is a cryptocurrency without a fixed price (not a 'stablecoin'), makes using it as a currency more interesting. The price may fluctuate, but if the user keeps just a couple hundred $ dollars in their dust_wallet, they can easily pay for something at a turnstile without having to worry about the price action. Also, as an asset, it may be valuable to simply buy and hold.
 
