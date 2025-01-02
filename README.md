@@ -9,3 +9,5 @@ The simple design of the web app and app versions will be agreeable to users, an
 A unique aspect of dust (symbol ẟ, as in this costs ẟ14.97), is that the user has the option in the (open source) wallet to partition a percentage % of each transaction to the dust_vault. Each month, at the end of the month, 50% of the dust_vault will be donated to charity or a worthy cause of some kind.
 
 The premine will be vested for 2 years, allocated to the developers who made the project. They will not be able to access or sell their premine for a minimum of 2 years (no rug pulls, thankyou very much :))
+
+To support this project, send $AZERO to: 5GsH6Nt1XYenFs9dqzVBG878SeT9G9sQL66BaLn2PpdRniHa
