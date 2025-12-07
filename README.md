@@ -10,4 +10,3 @@ A unique aspect of dust (symbol ẟ, as in this costs ẟ14.97), is that the use
 
 The premine will be vested for 2 years, allocated to the developers who made the project. They will not be able to access or sell their premine for a minimum of 2 years.
 
-To support this project, send $AZERO to: 5GsH6Nt1XYenFs9dqzVBG878SeT9G9sQL66BaLn2PpdRniHa
