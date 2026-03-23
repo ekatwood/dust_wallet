@@ -2,6 +2,8 @@
 
 A cryptocurrency wallet built on the Aleph Zero blockchain.
 
+Front end scaffolded: https://dust-wallet-ecb72.firebaseapp.com/
+
 This will be a simple cryptocurrency built with Rust smart contracts on the Aleph Zero blockchain. The wallet will have all the functionality for usage of a cryptocurrency, as well as the ability to scan a QR code and pay for something at a payment turnstile. Also, the app version will have support for Nova wallet as well as 'tap to pay' at a turnstile.
 
 $AZERO has support for private smart contracts. This is important for day to day in-person transactions, so that you can use crypto at a store without it being obvious on the blockchain that you made a purchase.
